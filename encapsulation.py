@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """
 Notes:
     Implementation using @property

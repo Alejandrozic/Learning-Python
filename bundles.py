@@ -11,10 +11,10 @@ import re
 
 myList = ['a', 'b', 'c', 'd']
 
-with open('datafile.txt', 'w') as fh:
+with open('datafile.pickle', 'w') as fh:
     pickle.dump(myList, fh)
 
-with open('datafile.txt') as fh:
+with open('datafile.pickle') as fh:
     unpickledlist = pickle.load(fh)
 
 

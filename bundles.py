@@ -34,3 +34,11 @@ print match.group(0)                # 1234abc
 print match.group(1)                # 1234
 print match.group(2)                # abc
 
+
+###################
+# Format Strings  #
+###################
+
+print '{0} {1} {vehicle}'.format(0, 1, vehicle='car')   # 0 1 car
+# with r'' escapes won't be translated
+print r'a\nb'                                           # a\nb

@@ -42,3 +42,14 @@ print match.group(2)                # abc
 print '{0} {1} {vehicle}'.format(0, 1, vehicle='car')   # 0 1 car
 # with r'' escapes won't be translated
 print r'a\nb'                                           # a\nb
+
+############
+#  Lambda  #
+############
+
+[attr for attr in dir({}) if '__' not in attr]
+# Prints
+# ['clear', 'copy', 'fromkeys', 'get', 'has_key',
+# 'items', 'iteritems', 'iterkeys', 'itervalues',
+# 'keys', 'pop', 'popitem', 'setdefault', 'update',
+# 'values', 'viewitems', 'viewkeys', 'viewvalues']

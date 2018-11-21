@@ -39,6 +39,7 @@ class MySinglyLinkedList(LinkedList):
 
     def delete(self, data):
         # O(N) Time Complexity
+
         last = self.head
 
         # Empty head

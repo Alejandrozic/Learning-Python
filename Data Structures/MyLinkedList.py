@@ -5,10 +5,12 @@ class MySinglyLinkedList(LinkedList):
 
     def __init__(self):
         self.head = None
+        self.size = 0
 
     def append(self, data):
         # O(N) Time Complexity
         node = Node(data)
+        self.size += 1
         if not self.head:
             self.head = node
             return
@@ -20,6 +22,7 @@ class MySinglyLinkedList(LinkedList):
     def prepend(self, data):
         # O(1) Time Complexity
         node = Node(data)
+        self.size += 1
         if not self.head:
             self.head = node
             return
@@ -38,6 +41,7 @@ class MySinglyLinkedList(LinkedList):
         if last:
             if last.data == data:
                 self.head = last.next
+                self.size -= 1
                 return
 
         # Search for data
@@ -45,6 +49,7 @@ class MySinglyLinkedList(LinkedList):
         while last:
             if last.data == data:
                 prev.next = last.next
+                self.size -= 1
                 break
             prev = last
             last = last.next
@@ -57,13 +62,8 @@ class MySinglyLinkedList(LinkedList):
             last = last.next
         return node_data
 
-    def get_count_elements(self):
-        count = 0
-        last = self.head
-        while last:
-            count += 1
-            last = last.next
-        return count
+    def get_size(self):
+        return self.size
 
 
 class Node(object):
@@ -110,4 +110,4 @@ if __name__ == '__main__':
 
     # Count of Node Elements
     # output: 5
-    print linkedlist.get_count_elements()
+    print linkedlist.get_size()

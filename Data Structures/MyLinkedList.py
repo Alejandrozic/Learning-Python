@@ -9,7 +9,6 @@ class MySinglyLinkedList(LinkedList):
 
     def append(self, data):
         # O(N) Time Complexity
-
         node = Node(data)
         self.size += 1
 
@@ -26,7 +25,6 @@ class MySinglyLinkedList(LinkedList):
 
     def prepend(self, data):
         # O(1) Time Complexity
-
         node = Node(data)
         self.size += 1
 
@@ -39,7 +37,6 @@ class MySinglyLinkedList(LinkedList):
 
     def delete(self, data):
         # O(N) Time Complexity
-
         last = self.head
 
         # Empty head

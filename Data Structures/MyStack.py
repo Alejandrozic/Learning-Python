@@ -39,7 +39,7 @@ class MyStack(Stack):
             return True
         return False
 
-    def get_items(self):
+    def get_stack(self):
         return self.stack
 
 
@@ -66,4 +66,4 @@ if __name__ == '__main__':
     # Test pop
     mystack.pop()
 
-    print mystack.get_items()
+    print mystack.get_stack()

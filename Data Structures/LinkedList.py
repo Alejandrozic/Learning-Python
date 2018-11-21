@@ -13,4 +13,4 @@ class LinkedList:
 
     def get_nodes(self): pass
 
-    def get_count_elements(self): pass
+    def get_size(self): pass

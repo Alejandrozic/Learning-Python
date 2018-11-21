@@ -7,6 +7,7 @@ class MySinglyLinkedList(LinkedList):
         self.head = None
 
     def append(self, data):
+        # O(N) Time Complexity
         node = Node(data)
         if not self.head:
             self.head = node
@@ -17,6 +18,7 @@ class MySinglyLinkedList(LinkedList):
         last.next = node
 
     def prepend(self, data):
+        # O(1) Time Complexity
         node = Node(data)
         if not self.head:
             self.head = node
@@ -25,6 +27,7 @@ class MySinglyLinkedList(LinkedList):
         self.head = node
 
     def delete(self, data):
+        # O(N) Time Complexity
         last = self.head
 
         # Empty head

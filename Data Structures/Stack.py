@@ -7,13 +7,15 @@ class Stack:
     @abstractmethod
     def push(self, data): pass
 
+    @abstractmethod
     def pop(self): pass
 
+    @abstractmethod
     def peek(self): pass
 
-    def get_size(self): pass
-
+    @abstractmethod
     def is_full(self): pass
 
+    @abstractmethod
     def is_empty(self): pass
 

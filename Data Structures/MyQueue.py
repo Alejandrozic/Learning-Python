@@ -16,12 +16,14 @@ class MyCircularQueue(Queue):
         self.tail = 0
 
     def enqueue(self, num):
+        # O(1) Time Complexity
         if not self.is_full():
             self.queue[self.tail] = num
             self.tail = (self.tail + 1) % self.arr_size
             self.size += 1
 
     def dequeue(self):
+        # O(1) Time Complexity
         if not self.is_empty():
             self.queue[self.head] = None
             self.head = (self.head + 1) % self.arr_size

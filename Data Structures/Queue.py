@@ -18,3 +18,6 @@ class Queue:
 
     @abstractmethod
     def is_full(self): pass
+
+    @abstractmethod
+    def get_queue(self): pass

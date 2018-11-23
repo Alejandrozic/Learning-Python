@@ -11,4 +11,10 @@ class BinarySearchTree:
     def delete(self, data): pass
 
     @abstractmethod
-    def find(self, data): pass
+    def traverse(self, data): pass
+
+    @abstractmethod
+    def get_min(self, data): pass
+
+    @abstractmethod
+    def get_max(self, data): pass

@@ -69,10 +69,6 @@ class MyBinarySearchTree(BinarySearchTree):
             return self.get_predecessor(node.right)
         return node
 
-    def find(self, data):
-        # O(logN)
-        pass
-
     def traverse(self):
         if self.root:
             self.traverse_in_order(self.root)

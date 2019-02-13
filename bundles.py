@@ -24,9 +24,9 @@ with open('datafile.pickle') as fh:
 
 regex = re.compile('(?P<nums>[\d]+)(?P<none_nums>[\D]+)')
 
-match = regex.search('1234abc 567')
+match = regex.search('1234abc')
 
-print match.groupdict()             # {'nums': 'abc', 'none_nums': '1234'}
+print match.groupdict()             # {'none_nums': 'abc', 'nums': '1234'}
 print match.groups()                # ('1234', 'abc')
 print match.group('nums')           # 1234
 print match.group('none_nums')      # abc

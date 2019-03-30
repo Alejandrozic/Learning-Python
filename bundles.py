@@ -53,3 +53,25 @@ print r'a\nb'                                           # a\nb
 # 'items', 'iteritems', 'iterkeys', 'itervalues',
 # 'keys', 'pop', 'popitem', 'setdefault', 'update',
 # 'values', 'viewitems', 'viewkeys', 'viewvalues']
+
+#############
+#  Classes  #
+#############
+
+class Square(object):
+    
+    def __init__(self, attr):
+        self._attr = attr
+    
+    @property
+    def attr(self):
+        # Getter
+        return self._attr
+    
+    @attr.setter
+    def attr(self, attr):
+        if attr <= 0:
+            raise ValueError('Value must be positive and greater than 0.')
+        else:
+            self._attr = attr
+    

@@ -75,3 +75,18 @@ class Square(object):
         else:
             self._attr = attr
     
+    def __str__(self):
+        # for 'str()'
+        return 'Square: attr={0}'.format(self._attr)
+    
+    def __repr__(self):
+        # for 'repr()'
+        return 'Square({0})'.format(self._attr)
+    
+    def __eq__(self, other):
+        # for '=='
+        if isintance(other, Square):
+            return self._attr == other.attr
+        else:
+            return False
+    

@@ -90,3 +90,20 @@ class Square(object):
         else:
             return False
     
+###############
+#  Interning  #
+###############
+
+"""
+== compares values
+is compares memory reference
+"""
+
+a = 'my string'
+b = 'my string'
+a is b # returns False, id(a) is not id(b)
+
+# Creates shared memory object
+a = sys.intern('my string')
+b = sys.intern('my string')
+a is b # returns True, same memory reference

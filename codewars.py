@@ -4,4 +4,4 @@
 
 # -- KATA Disemvowel Trolls 7kyu
 def disemvowel(string):
-    return ''.join([c for c in string if c.lower() not in frozenset({'a','e','i','o','u'})])
+    return ''.join([c for c in string if c.lower() not in {'a','e','i','o','u'}])

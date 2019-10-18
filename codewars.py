@@ -13,3 +13,8 @@ def openOrSenior(data):
         age, handicap = person[0], person[1]
         output.append('Senior' if age > 54 and handicap > 7 else 'Open')
     return output
+
+# -- KATA Find the next perfect square! 7kyu
+def find_next_square(sq):
+    n = sq**0.5
+    return -1 if n % 1 else (n+1) **2

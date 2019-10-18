@@ -33,3 +33,22 @@ def binary_array_to_number(arr):
         binary, exponent = arr.pop(0), len(arr)
         sum_ += binary * (2 ** exponent)
     return sum_
+
+"""
+KATA Find the missing letter 6kyu
+
+Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+The array will always contain letters in only one case.
+"""
+import string
+def find_missing_letter(chars):
+    if chars[0].islower():
+        alphabet = string.ascii_lowercase
+    else:
+        alphabet = string.ascii_uppercase
+    alphabet = alphabet[
+               alphabet.index(chars[0]):
+               alphabet.index(chars[-1])+1
+               ]
+    return list(set(alphabet) - set(chars))[0]

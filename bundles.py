@@ -107,3 +107,12 @@ a is b # returns False, id(a) is not id(b)
 a = sys.intern('my string')
 b = sys.intern('my string')
 a is b # returns True, same memory reference
+
+####################
+#  Dict: clearing  #
+####################
+
+d = { 'a': 1}
+
+d.clear()   # Clears dictionary at pointer [other variables pointing to same dict will also reset]
+d = {}      # Creates new dictionary and points d to it

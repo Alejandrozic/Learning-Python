@@ -116,3 +116,45 @@ d = { 'a': 1}
 
 d.clear()   # Clears dictionary at pointer [other variables pointing to same dict will also reset]
 d = {}      # Creates new dictionary and points d to it
+
+#############################
+#  Collections: namedtuple  #
+#############################
+
+# Method 1
+from collections import namedtuple
+Resistor = namedtuple('Resistor', 'number manuf resistence')
+r = Resistor('1', 'test-manuf', 5)
+
+# Method 2
+from inspect import signature
+class Resistor:
+
+    __slots__ = __fields__ = 'number', 'manuf', 'resistence'
+
+    def __init__(self, number,  manuf, resistence):
+        self.number = number
+        self.manuf = manuf
+        self.resistence = resistence
+
+    def __repr__(self):
+        # return f'Resistor("{self.number!r}","{self.manuf!r}",{repr(self.resistence)})'
+        # return f'{type(self).__name__}("{self.number!r}","{self.manuf!r}",{repr(self.resistence)})'
+        fields = ', '.join(repr(getattr(self, f)) for f in self.__fields__)
+        # fields = signature(self.__init__).parameters
+        return f'{type(self).__name__}({fields})'
+    # string!r == repr(string)
+
+# Method 3
+from dataclasses import dataclass
+@dataclass
+class Resistor:
+    number      : str
+    manuf       : str
+    resistance  : int
+r = Resistor('23432' , 'dsfdd', 10)
+
+
+# Checking isinstance for custom class
+if isinstance(r, Resistor):
+    pass

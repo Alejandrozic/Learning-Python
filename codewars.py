@@ -80,3 +80,23 @@ def bouncingBall(h, bounce, window):
         if h >= window:
             count += 1
     return count
+
+"""
+Human Readable Time 5kyu
+Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+
+HH = hours, padded to 2 digits, range: 00 - 99
+MM = minutes, padded to 2 digits, range: 00 - 59
+SS = seconds, padded to 2 digits, range: 00 - 59
+The maximum time never exceeds 359999 (99:59:59)
+
+You can find some examples in the test fixtures.
+"""
+def make_readable(seconds):
+    return ':'.join(
+        [
+            str(seconds // 3600).zfill(2),
+            str((seconds % 3600)//60).zfill(2),
+            str(seconds % 60).zfill(2),
+        ]
+    )  
